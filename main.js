@@ -8,10 +8,20 @@ const arrayString = (arrayHere) => {
     let stringEncoded = arrayHere.toString();
     printToDom(stringEncoded, 'printEncode');
 } ;
+// const decodeString = (arrayHere2) => {
+//     let decodeString = newArrayToString.fromCharCode();
+//     printToDom(decodeString, 'printDecode');
+// };
 
 const decodeThis = () => {
     let stringInput = document.getElementById("inputValue2").value;
     let newStringInput = stringInput.split(",");
+   // let newArrayToString = newStringInput.toString();
+    let newArrayToString = [];
+    for(i=0;i<newStringInput;i++){
+        newArrayToString.push(newStringInput[i]);
+    };
+    decodeString(newArrayToString);
 }; 
 
 const encodeThis = () => {
