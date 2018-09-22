@@ -1,20 +1,18 @@
 
-
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML += stringToPrint;
 };
 
-
-//let word = 'Hello!';
-// let encodeWord = [];
-// for(i=0;i<word.length;i++){
-//     encodeWord.push(word.charCodeAt([i]));
-// };
 const arrayString = (arrayHere) => {
     let stringEncoded = arrayHere.toString();
     printToDom(stringEncoded, 'printEncode');
 } ;
+
+const decodeThis = () => {
+    let stringInput = document.getElementById("inputValue2").value;
+    let newStringInput = stringInput.split(",");
+}; 
 
 const encodeThis = () => {
     let encodeWord = [];
@@ -27,3 +25,6 @@ const encodeThis = () => {
 
 document.getElementById("button-addon1").addEventListener("click", function()
 {encodeThis()});
+
+document.getElementById("button-addon2").addEventListener("click", function()
+{decodeThis()});
