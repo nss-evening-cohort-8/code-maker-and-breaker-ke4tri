@@ -8,21 +8,18 @@ const arrayString = (arrayHere) => {
     let stringEncoded = arrayHere.toString();
     printToDom(stringEncoded, 'printEncode');
 } ;
-// const decodeString = (arrayHere2) => {
-//     let decodeString = newArrayToString.fromCharCode();
-//     printToDom(decodeString, 'printDecode');
-// };
+
 
 const decodeThis = () => {
     let stringInput = document.getElementById("inputValue2").value;
     let newStringInput = stringInput.split(",");
-   // let newArrayToString = newStringInput.toString();
-    let newArrayToString = [];
-    for(i=0;i<newStringInput;i++){
-        newArrayToString.push(newStringInput[i]);
+    let decodeString = [];
+     for(i=0;i<newStringInput.length;i++){
+         decodeString.push(String.fromCharCode(newStringInput[i]));
     };
-    decodeString(newArrayToString);
-}; 
+   let goToDomString = decodeString.join('')
+   printToDom(goToDomString, 'printDecode')
+ }; 
 
 const encodeThis = () => {
     let encodeWord = [];
